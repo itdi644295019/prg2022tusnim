@@ -7,7 +7,7 @@ import javax.swing.Timer;
 
 public class CountDownTimerGUI extends javax.swing.JFrame {
 
-    int min, sec, min1, sec1 ,hr, hr1;
+    int min, sec, min1, sec1, hr, hr1;
     Timer timer;
     boolean isStop = false;
 
@@ -35,8 +35,8 @@ public class CountDownTimerGUI extends javax.swing.JFrame {
                 cbxHr.addItem("0" + i);
             } else {
                 cbxHr.addItem("" + i);
-    }
-    }
+            }
+        }
     }
 
     /**
@@ -68,12 +68,15 @@ public class CountDownTimerGUI extends javax.swing.JFrame {
         btnAdd30 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Count Down Timer by tusnim");
 
+        jLabel1.setDisplayedMnemonic('C');
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 51, 204));
         jLabel1.setText("Count Down Timer by tusnim");
 
         lblMin.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        lblMin.setForeground(new java.awt.Color(102, 255, 102));
         lblMin.setText("00");
         lblMin.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
@@ -89,6 +92,7 @@ public class CountDownTimerGUI extends javax.swing.JFrame {
         jLabel3.setText(":");
 
         lblSec.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        lblSec.setForeground(new java.awt.Color(153, 255, 153));
         lblSec.setText("00");
 
         btnStart.setBackground(new java.awt.Color(51, 255, 0));
@@ -132,6 +136,7 @@ public class CountDownTimerGUI extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/chap4/pngtree-alarm-clock-icon-png-image_1749230.jpg"))); // NOI18N
 
         lblHr.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        lblHr.setForeground(new java.awt.Color(0, 255, 0));
         lblHr.setText("00");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
@@ -263,13 +268,13 @@ public class CountDownTimerGUI extends javax.swing.JFrame {
         timer = new Timer(1000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                
+
                 if (isStop) {
                     min = min1;
                     sec = sec1;
-                    hr = hr1; 
+                    hr = hr1;
                     isStop = false;
-                    
+
                 }
                 if (sec < 1) {
                     sec = 60;
@@ -278,11 +283,11 @@ public class CountDownTimerGUI extends javax.swing.JFrame {
                 if (min < 0) {
                     min = 59;
                     hr--;
-                    
+
                 }
 
                 if (hr < 0) {
-                    JOptionPane.showMessageDialog(rootPane,"หมดเวลา");
+                    JOptionPane.showMessageDialog(rootPane, "หมดเวลา");
                     min = 0;
                     sec = 0;
                     hr = 0;
@@ -291,7 +296,7 @@ public class CountDownTimerGUI extends javax.swing.JFrame {
                 } else {
                     sec--;
                 }
-                 if (min < 10) {
+                if (min < 10) {
                     lblMin.setText("0" + min);
                 } else {
                     lblMin.setText("" + min);
@@ -306,9 +311,9 @@ public class CountDownTimerGUI extends javax.swing.JFrame {
                 } else {
                     lblHr.setText("" + hr);
                 }
-                
+
             }
-            
+
         });
         timer.start();
 
