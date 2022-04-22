@@ -1,16 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package chap4;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author ASUS
- */
+
 public class NumberCalculationGUI extends javax.swing.JFrame {
 
     /**
@@ -43,9 +35,8 @@ public class NumberCalculationGUI extends javax.swing.JFrame {
         btnExit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("by tusnim");
 
-        jPanel1.setBackground(new java.awt.Color(153, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 0, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("โปรแกรมบวกเลข"));
 
         FirstNunber.setText("First Nunber : ");
@@ -197,12 +188,12 @@ public class NumberCalculationGUI extends javax.swing.JFrame {
         num1 = Float.parseFloat(txtFirst.getText());
         num2 = Float.parseFloat(txtSec.getText());
 
-        if (Sign == "+") {
+        if (Sign.equals("+")) {
             result = num1 + num2;
-        } else if (Sign == "-") {
+        } else if (Sign.equals("-")) {
             result = num1 - num2;
 
-        } else if (Sign == "*") {
+        } else if (Sign.equals("*")) {
             result = num1 * num2;
         } else {
             result = num1 / num2;

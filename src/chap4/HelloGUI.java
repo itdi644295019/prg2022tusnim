@@ -82,6 +82,15 @@ public class HelloGUI extends javax.swing.JFrame {
 
         tarResult.setColumns(20);
         tarResult.setRows(5);
+        tarResult.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                tarResultAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
         jScrollPane1.setViewportView(tarResult);
 
         cbxCareer.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -243,6 +252,10 @@ public class HelloGUI extends javax.swing.JFrame {
     private void rdoFemaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdoFemaleActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rdoFemaleActionPerformed
+
+    private void tarResultAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_tarResultAncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tarResultAncestorAdded
 
     /**
      * @param args the command line arguments

@@ -1,4 +1,3 @@
-// Tusnim Ratinyom 644295019
 package chap3;
 
 import java.util.Scanner;
@@ -8,7 +7,7 @@ public class LetterPostShop {
     static void printMenu() {
 
         System.out.println("Songkhla Post Office");
-        System.out.println("Program is created by Tusnim");
+        System.out.println("Program is created by AAA");
         System.out.println("------------------- Menu -------------------");
         System.out.println("0 : Exit");
         System.out.println("1 : Noraml Letter");

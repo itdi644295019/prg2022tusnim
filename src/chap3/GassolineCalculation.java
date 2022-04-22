@@ -16,7 +16,7 @@ public class GassolineCalculation {
         double amount = 0.0;
 
         System.out.println("Gasoline Calculation");
-        System.out.println("Program is created by TUSZAHAHA+");
+        System.out.println("Program is created by AAA");
 
         do {
             System.out.println("------------------- Menu -------------------");
