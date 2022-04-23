@@ -199,67 +199,68 @@ public class LetterPostShop extends javax.swing.JFrame {
     }//GEN-LAST:event_rdbNoramlActionPerformed
 
     private void btnComruteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComruteActionPerformed
-        String Price =txtWeight.getText();
-        if(Price.length()>0){
-        if(rdbNoraml.isSelected()){
-        String weightS=txtWeight.getText();
-        int weight = Integer.valueOf(weightS);
-        int weightre = 0;
-        if (weight <= 20) {
-            weightre = 3;
-        } else if (weight <= 100) {
-            weightre = 5;
-        } else if (weight <= 250) {
-            weightre = 9;
-        } else if (weight <= 500) {
-            weightre = 15;
-        } else if (weight <= 1000) {
-            weightre = 25;
-        } else if (weight <= 2500) {
-            weightre = 25;
+        String Price = txtWeight.getText();
+        if (Price.length() > 0) {
+            if (rdbNoraml.isSelected()) {
+                String weightS = txtWeight.getText();
+                int weight = Integer.valueOf(weightS);
+                int weightre = 0;
+                if (weight <= 20) {
+                    weightre = 3;
+                } else if (weight <= 100) {
+                    weightre = 5;
+                } else if (weight <= 250) {
+                    weightre = 9;
+                } else if (weight <= 500) {
+                    weightre = 15;
+                } else if (weight <= 1000) {
+                    weightre = 25;
+                } else if (weight <= 2500) {
+                    weightre = 25;
+                }
+                weightS = String.valueOf(weightre);
+                tarResult.setText("Normal Letter Service Price : " + weightS + " Bath");
+            } else if (rdbRegister.isSelected()) {
+                String weightS = txtWeight.getText();
+                int weight = Integer.valueOf(weightS);
+                int weightre = 0;
+                if (weight <= 20) {
+                    weightre = 3;
+                } else if (weight <= 100) {
+                    weightre = 5;
+                } else if (weight <= 250) {
+                    weightre = 9;
+                } else if (weight <= 500) {
+                    weightre = 15;
+                } else if (weight <= 1000) {
+                    weightre = 25;
+                } else if (weight <= 2500) {
+                    weightre = 25;
+                }
+                weightre += 13;
+                weightS = String.valueOf(weightre);
+                tarResult.setText("Register Letter Service Price : " + weightS + " Bath");
+            } else if (rdbEMS.isSelected()) {
+                String weightS = txtWeight.getText();
+                int weight = Integer.valueOf(weightS);
+                int weightre = 0;
+                if (weight <= 20) {
+                    weightre = 27;
+                } else if (weight <= 100) {
+                    weightre = 32;
+                } else if (weight <= 250) {
+                    weightre = 37;
+                } else if (weight <= 500) {
+                    weightre = 47;
+                } else if (weight <= 1000) {
+                    weightre = 62;
+                } else if (weight <= 2500) {
+                    weightre = 77;
+                }
+                weightS = String.valueOf(weightre);
+                tarResult.setText("EMS Letter Service Price : " + weightS + " Bath");
+            }
         }
-        weightS = String.valueOf(weightre);
-        tarResult.setText("Normal Letter Service Price : "+ weightS +" Bath");
-    }else if(rdbRegister.isSelected()){
-        String weightS=txtWeight.getText();
-        int weight = Integer.valueOf(weightS);
-        int weightre = 0;
-        if (weight <= 20) {
-            weightre = 3;
-        } else if (weight <= 100) {
-            weightre = 5;
-        } else if (weight <= 250) {
-            weightre = 9;
-        } else if (weight <= 500) {
-            weightre = 15;
-        } else if (weight <= 1000) {
-            weightre = 25;
-        } else if (weight <= 2500) {
-            weightre = 25;
-        }
-        weightre+=13;
-        weightS = String.valueOf(weightre);
-        tarResult.setText("Register Letter Service Price : "+ weightS +" Bath");
-    }else if(rdbEMS.isSelected()){
-        String weightS=txtWeight.getText();
-        int weight = Integer.valueOf(weightS);
-        int weightre = 0;
-        if (weight <= 20) {
-            weightre = 27;
-        } else if (weight <= 100) {
-            weightre = 32;
-        } else if (weight <= 250) {
-            weightre = 37;
-        } else if (weight <= 500) {
-            weightre = 47;
-        } else if (weight <= 1000) {
-            weightre = 62;
-        } else if (weight <= 2500) {
-            weightre = 77;
-        }
-        weightS = String.valueOf(weightre);
-        tarResult.setText("EMS Letter Service Price : "+ weightS +" Bath");
-    }}
 
     }//GEN-LAST:event_btnComruteActionPerformed
 

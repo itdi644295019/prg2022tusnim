@@ -150,35 +150,35 @@ public class BodyMassIndexGUI extends javax.swing.JFrame {
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         // TODO add your handling code here:
-        float  kg = 0 , cm = 0, bmi = 0 ;
-        String txt1 , txt2;
-        kg = (Integer)spnKg.getValue();
-        cm = (Integer)spnCm.getValue();
-        
-        bmi = kg/((cm/100)*(cm/100));
-        
+        float kg = 0, cm = 0, bmi = 0;
+        String txt1, txt2;
+        kg = (Integer) spnKg.getValue();
+        cm = (Integer) spnCm.getValue();
+
+        bmi = kg / ((cm / 100) * (cm / 100));
+
         if (bmi > 30) {
             //String txt1;
             txt1 = "อ้วนมาก / โรคอ้วนระดับ 3";
-            txt2 = "อันตรายระดับ 3";   
-        } else if (bmi >25) {
+            txt2 = "อันตรายระดับ 3";
+        } else if (bmi > 25) {
             txt1 = "อ้วน / โรคอ้วนระดับ 2";
             txt2 = "อันตรายระดับ 2";
-            
-        } else if (bmi >23){
+
+        } else if (bmi > 23) {
             txt1 = "ท้วม / โรคอ้วนระดับ 1";
             txt2 = "อันตรายระดับ 1";
-            
-        } else if (bmi >18.50){
+
+        } else if (bmi > 18.50) {
             txt1 = "ปกติ (สุขภาพดี)";
             txt2 = "เท่าคนปกติ";
 
-        }else {
+        } else {
             txt1 = "น้ำหนักน้อย / ผอม";
-            txt2 = "มากกว่าคนปกติ"; 
+            txt2 = "มากกว่าคนปกติ";
         }
 
-        tarResult.setText("BMI =  "+String.format("%.2f", bmi)+ "\nอยู่ในเกณฑ์" + txt1 + "\nถาวะเสี่ยงต่อโรค" + txt1);
+        tarResult.setText("BMI =  " + String.format("%.2f", bmi) + "\nอยู่ในเกณฑ์" + txt1 + "\nถาวะเสี่ยงต่อโรค" + txt1);
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
@@ -194,8 +194,6 @@ public class BodyMassIndexGUI extends javax.swing.JFrame {
         spnCm.setValue(0);
         spnKg.setValue(0);
         tarResult.setText("");
-        
-        
 
 
     }//GEN-LAST:event_btnClearActionPerformed

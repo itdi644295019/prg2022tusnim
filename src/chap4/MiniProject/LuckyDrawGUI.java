@@ -8,7 +8,7 @@ public class LuckyDrawGUI extends javax.swing.JFrame {
     public LuckyDrawGUI() {
         initComponents();
     }
-    int N = 1;
+    int X = 1;
     String name = "";
 
     @SuppressWarnings("unchecked")
@@ -33,9 +33,10 @@ public class LuckyDrawGUI extends javax.swing.JFrame {
         btnExit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("จับฉลาก");
+        setTitle("by tusnim");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 204, 204));
         jLabel1.setText("จับฉลากผู้โชคดี");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -187,13 +188,13 @@ public class LuckyDrawGUI extends javax.swing.JFrame {
         cbxPunctuate.setEnabled(false);
         name = txtName.getText();
 
-        if (N > 1) {
+        if (X > 1) {
             sep();
         }
         name = String.format(txtName.getText());
         tarResult.setText(tarResult.getText() + (name));
         txtName.setText("");
-        N++;
+        X++;
 
     }//GEN-LAST:event_btnAddActionPerformed
 
@@ -211,7 +212,7 @@ public class LuckyDrawGUI extends javax.swing.JFrame {
         cbxPunctuate.setEnabled(true);
         tarLucky.setText("");
         tarResult.setText("");
-        N = 1;
+        X = 1;
     }//GEN-LAST:event_btnClearActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
